@@ -26,7 +26,7 @@ export const itinerary = [
     },
     {
         day: "Ziua 5-7",
-        location: "Da Nang & Hoi An",
+        location: "Iubitica",
         description: "După zborul intern, veti avea ocazia sa va intalniti cu cea mai frumoasa si minutata femeie din lume. Acum este somnoroasa, dar este de inteles :)",
         image: `${import.meta.env.BASE_URL}images/iubita.jpg`
     },
