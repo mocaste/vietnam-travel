@@ -1,7 +1,5 @@
 import { MapPin, Phone, Mail, Star, Calendar, Users, Plane, Camera, Shield, Clock } from 'lucide-react';
 
-// 🔧 Fixed image URLs for GitHub Pages
-// Use Unsplash images that are guaranteed to work
 export const features = [
     { icon: <Plane className="w-6 h-6" />, title: "Bilete de avion incluse", desc: "Check-in, cazare, mese și alte servicii" },
     { icon: <Shield className="w-6 h-6" />, title: "Organizare completă", desc: "Lasă grijile în seama noastră pentru relaxare totală" },
@@ -27,8 +25,8 @@ export const itinerary = [
     {
         day: "Ziua 5-7",
         location: "Iubitica",
-        description: "După zborul intern, veti avea ocazia sa va intalniti cu cea mai frumoasa si minutata femeie din lume. Acum este somnoroasa, dar este de inteles :)",
-        image: `${import.meta.env.BASE_URL}images/iubita.jpg`
+        description: "După zborul intern, veti avea ocazia sa vedeti Da nang",
+        image: `${import.meta.env.BASE_URL}images/da-nang.jpg`
     },
     {
         day: "Ziua 7-10",

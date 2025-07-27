@@ -15,7 +15,7 @@ const Overview = () => {
             alt: "Hanoi"
         },
         {
-            src: `${import.meta.env.BASE_URL}images/iubita.jpg`,
+            src: `${import.meta.env.BASE_URL}images/da-nang.jpg`,
             alt: "Vietnam landscape"
         }
     ];
