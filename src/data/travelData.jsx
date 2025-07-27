@@ -32,7 +32,7 @@ export const itinerary = [
         day: "Ziua 7-10",
         location: "Hanoi",
         description: "Savurați capitala țării unde trecutul și prezentul dansează în același ritm. Vizitați Cartierul Vechi, Templul Literaturii, Mausoleul lui Ho Chi Minh și Pagoda cu un Singur Pilon.",
-        image: `${import.meta.env.BASE_URL}images/hanoi1.jpg`
+        image: `${import.meta.env.BASE_URL}images/hanoi.jpg`
     }
 ];
 
