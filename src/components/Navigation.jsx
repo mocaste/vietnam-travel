@@ -1,7 +1,16 @@
 import React from 'react';
-import { navigationTabs } from '../data/travelData.jsx';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Navigation = ({ activeTab, onTabChange }) => {
+    const { t } = useTranslation();
+    
+    const navigationTabs = [
+        { id: 'overview', labelKey: "travelData.navigationTabs.overview" },
+        { id: 'itinerary', labelKey: "travelData.navigationTabs.itinerary" },
+        { id: 'features', labelKey: "travelData.navigationTabs.features" },
+        { id: 'packages', labelKey: "travelData.navigationTabs.packages" }
+    ];
+    
     return (
         <nav className="bg-white shadow-sm border-b sticky top-0 z-10">
             <div className="max-w-7xl mx-auto px-4">
@@ -16,7 +25,7 @@ const Navigation = ({ activeTab, onTabChange }) => {
                                     : 'border-transparent text-gray-500 hover:text-gray-700'
                             }`}
                         >
-                            {tab.label}
+                            {t(tab.labelKey)}
                         </button>
                     ))}
                 </div>

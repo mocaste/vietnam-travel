@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const Overview = () => {
+    const { t } = useTranslation();
     const images = [
         {
             src: `${import.meta.env.BASE_URL}images/ho-chi-minh.jpg`,
@@ -24,22 +26,17 @@ const Overview = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                    O aventură de neuitat prin Vietnam
+                    {t('overview.title')}
                 </h3>
                 <div className="prose prose-lg text-gray-600 space-y-4">
                     <p>
-                        Explorați orașul Ho Chi Minh, cel mai mare centru urban din Vietnam într-un tur privat
-                        ce include vizite la monumente importante precum Muzeul Rămășițelor Războiului,
-                        Palatul Reunificării, Catedrala Notre-Dame din Saigon și oficiul poștal.
+                        {t('overview.paragraph1')}
                     </p>
                     <p>
-                        Plimbați-vă prin piața Ben Thanh, unde aroma mirodeniilor și agitația comercianților
-                        creează o atmosferă autentică. Vizitați Hoi An, orașul patrimoniu UNESCO în care
-                        timpul pare să se fi oprit în loc.
+                        {t('overview.paragraph2')}
                     </p>
                     <p>
-                        Finalizați călătoria în Hanoi, savurând capitala țării, un oraș unde trecutul și
-                        prezentul dansează în același ritm. Luați cu voi amintiri de neprețuit din Planeta Vietnam!
+                        {t('overview.paragraph3')}
                     </p>
                 </div>
             </div>

@@ -1,8 +1,12 @@
 import React from 'react';
 import { Plane } from 'lucide-react';
 import Button from './ui/Button';
+import LanguageSelector from './LanguageSelector';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Header = ({ onContactClick }) => {
+    const { t } = useTranslation();
+    
     return (
         <header className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg">
             <div className="max-w-7xl mx-auto px-4 py-4">
@@ -12,16 +16,19 @@ const Header = ({ onContactClick }) => {
                             <Plane className="w-6 h-6" />
                         </div>
                         <div>
-                            <h1 className="text-2xl font-bold">Free Spirit Exotic Travel</h1>
-                            <p className="text-emerald-100 text-sm">Călătorii de neuitat în Vietnam</p>
+                            <h1 className="text-2xl font-bold">{t('header.companyName')}</h1>
+                            <p className="text-emerald-100 text-sm">{t('header.tagline')}</p>
                         </div>
                     </div>
-                    <Button
-                        variant="secondary"
-                        onClick={onContactClick}
-                    >
-                        Contactează-ne
-                    </Button>
+                    <div className="flex items-center space-x-4">
+                        <LanguageSelector />
+                        <Button
+                            variant="secondary"
+                            onClick={onContactClick}
+                        >
+                            {t('header.contactUs')}
+                        </Button>
+                    </div>
                 </div>
             </div>
         </header>

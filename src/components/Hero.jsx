@@ -1,19 +1,21 @@
 import React from 'react';
 import { Calendar, MapPin, Users } from 'lucide-react';
 import Button from './ui/Button';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Hero = ({ onBookingClick }) => {
+    const { t } = useTranslation();
+    
     return (
         <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-700 text-white overflow-hidden">
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative max-w-7xl mx-auto px-4 py-20 text-center">
                 <div className="mb-8">
                     <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                        Circuit Vietnam – 10 zile
+                        {t('hero.title')}
                     </h2>
                     <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Descoperiți farmecul Vietnamului într-o aventură de 10 zile! De la energia Ho Chi Minh City
-                        la străzile fermecătoare din Hoi An și ritmul de ne-egalat al capitalei Hanoi.
+                        {t('hero.subtitle')}
                     </p>
                 </div>
 
@@ -21,19 +23,19 @@ const Hero = ({ onBookingClick }) => {
                     <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
                         <div className="flex items-center space-x-2">
                             <Calendar className="w-5 h-5" />
-                            <span>10 zile / 9 nopți</span>
+                            <span>{t('hero.duration')}</span>
                         </div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
                         <div className="flex items-center space-x-2">
                             <MapPin className="w-5 h-5" />
-                            <span>Ho Chi Minh - Da Nang - Hanoi</span>
+                            <span>{t('hero.route')}</span>
                         </div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
                         <div className="flex items-center space-x-2">
                             <Users className="w-5 h-5" />
-                            <span>Pentru toate vârstele</span>
+                            <span>{t('hero.allAges')}</span>
                         </div>
                     </div>
                 </div>
@@ -43,7 +45,7 @@ const Hero = ({ onBookingClick }) => {
                     size="lg"
                     onClick={onBookingClick}
                 >
-                    Sunteți gata de aventură? 🌟
+                    {t('hero.bookNow')}
                 </Button>
             </div>
 
