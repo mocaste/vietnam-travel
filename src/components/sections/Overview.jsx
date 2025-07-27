@@ -3,19 +3,19 @@ import React from 'react';
 const Overview = () => {
     const images = [
         {
-            src: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=300&h=200&fit=crop",
+            src: `${import.meta.env.BASE_URL}images/ho-chi-minh.jpg`,
             alt: "Ho Chi Minh City"
         },
         {
-            src: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=300&h=200&fit=crop",
+            src: `${import.meta.env.BASE_URL}images/hoi-an.jpg`,
             alt: "Hoi An"
         },
         {
-            src: "https://images.unsplash.com/photo-1509233131372-de8b8f50ad2b?w=300&h=200&fit=crop",
+            src: `${import.meta.env.BASE_URL}images/hanoi.jpg`,
             alt: "Hanoi"
         },
         {
-            src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop",
+            src: `${import.meta.env.BASE_URL}images/iubita.jpg`,
             alt: "Vietnam landscape"
         }
     ];
