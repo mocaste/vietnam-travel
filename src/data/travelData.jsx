@@ -1,5 +1,7 @@
 import { MapPin, Phone, Mail, Star, Calendar, Users, Plane, Camera, Shield, Clock } from 'lucide-react';
 
+// 🔧 Fixed image URLs for GitHub Pages
+// Use Unsplash images that are guaranteed to work
 export const features = [
     { icon: <Plane className="w-6 h-6" />, title: "Bilete de avion incluse", desc: "Check-in, cazare, mese și alte servicii" },
     { icon: <Shield className="w-6 h-6" />, title: "Organizare completă", desc: "Lasă grijile în seama noastră pentru relaxare totală" },
@@ -14,19 +16,20 @@ export const itinerary = [
         day: "Ziua 1-3",
         location: "Ho Chi Minh City",
         description: "Explorați orașul Ho Chi Minh, cel mai mare centru urban din Vietnam. Vizitați Muzeul Rămășițelor Războiului, Palatul Reunificării, Catedrala Notre-Dame și Tunelurile Cu Chi. Plimbați-vă prin piața Ben Thanh.",
-        image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=400&h=250&fit=crop"
+        // 🔧 Using specific Unsplash URLs that work better with GitHub Pages
+        image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
     },
     {
         day: "Ziua 4-6",
         location: "Da Nang & Hoi An",
         description: "După zborul intern, vizitați Hoi An - orașul patrimoniu UNESCO. Explorați Munții de Marmură și faimosul Pod de Aur din Ba Na Hills. Relaxați-vă pe plajele My Khe și An Bang.",
-        image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400&h=250&fit=crop"
+        image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
     },
     {
         day: "Ziua 7-10",
         location: "Hanoi",
         description: "Savurați capitala țării unde trecutul și prezentul dansează în același ritm. Vizitați Cartierul Vechi, Templul Literaturii, Mausoleul lui Ho Chi Minh și Pagoda cu un Singur Pilon.",
-        image: "https://images.unsplash.com/photo-1509233131372-de8b8f50ad2b?w=400&h=250&fit=crop"
+        image: "https://images.unsplash.com/photo-1509233131372-de8b8f50ad2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
     }
 ];
 
