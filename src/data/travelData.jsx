@@ -17,19 +17,25 @@ export const itinerary = [
         location: "Ho Chi Minh City",
         description: "Explorați orașul Ho Chi Minh, cel mai mare centru urban din Vietnam. Vizitați Muzeul Rămășițelor Războiului, Palatul Reunificării, Catedrala Notre-Dame și Tunelurile Cu Chi. Plimbați-vă prin piața Ben Thanh.",
         // 🔧 Using specific Unsplash URLs that work better with GitHub Pages
-        image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+        image: "/images/ho-chi-minh.jpg"
     },
     {
-        day: "Ziua 4-6",
+        day: "Ziua 4-5",
         location: "Da Nang & Hoi An",
         description: "După zborul intern, vizitați Hoi An - orașul patrimoniu UNESCO. Explorați Munții de Marmură și faimosul Pod de Aur din Ba Na Hills. Relaxați-vă pe plajele My Khe și An Bang.",
-        image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+        image: "/images/hoi-an.jpg"
+    },
+    {
+        day: "Ziua 5-7",
+        location: "Da Nang & Hoi An",
+        description: "După zborul intern, veti avea ocazia sa va intalniti cu cea mai frumoasa si minutata femeie din lume. Acum este somnoroasa, dar este de inteles :)",
+        image: "/images/iubita.jpg"
     },
     {
         day: "Ziua 7-10",
         location: "Hanoi",
         description: "Savurați capitala țării unde trecutul și prezentul dansează în același ritm. Vizitați Cartierul Vechi, Templul Literaturii, Mausoleul lui Ho Chi Minh și Pagoda cu un Singur Pilon.",
-        image: "https://images.unsplash.com/photo-1509233131372-de8b8f50ad2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+        image: "/images/hanoi.jpg"
     }
 ];
 

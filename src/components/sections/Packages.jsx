@@ -5,7 +5,6 @@ import Button from '../ui/Button';
 const Packages = () => {
     const handleBooking = (packageInfo) => {
         console.log('Booking package:', packageInfo);
-        // Handle booking logic here
     };
 
     return (
