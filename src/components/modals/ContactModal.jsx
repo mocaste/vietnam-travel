@@ -48,7 +48,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                         onChange={handleChange}
                         placeholder="Numele tău"
                         required
-                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                     />
                     <input
                         type="email"
@@ -57,7 +57,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                         onChange={handleChange}
                         placeholder="Email"
                         required
-                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                     />
                     <input
                         type="tel"
@@ -65,7 +65,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Telefon"
-                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                     />
                     <textarea
                         name="message"
@@ -73,7 +73,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                         onChange={handleChange}
                         placeholder="Mesajul tău"
                         rows={4}
-                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                     ></textarea>
 
                     <Button
