@@ -13,7 +13,7 @@ const Button = ({
 
     const variants = {
         primary: 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600 focus:ring-orange-500 transform hover:scale-105 shadow-xl',
-        secondary: 'bg-amber-100 text-amber-800 hover:bg-amber-200 focus:ring-amber-500 border border-amber-200',
+        secondary: 'bg-white text-emerald-600 hover:bg-emerald-50 focus:ring-emerald-500',
         success: 'bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500',
         outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500'
     };

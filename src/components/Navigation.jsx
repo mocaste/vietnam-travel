@@ -21,8 +21,8 @@ const Navigation = ({ activeTab, onTabChange }) => {
                             onClick={() => onTabChange(tab.id)}
                             className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
                                 activeTab === tab.id
-                                    ? 'border-amber-600 text-amber-700'
-                                    : 'border-transparent text-gray-500 hover:text-amber-600'
+                                    ? 'border-emerald-500 text-emerald-600'
+                                    : 'border-transparent text-gray-500 hover:text-gray-700'
                             }`}
                         >
                             {t(tab.labelKey)}

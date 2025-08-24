@@ -10,21 +10,21 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid md:grid-cols-3 gap-8">
                     <div>
-                        <h4 className="text-xl font-bold mb-4 text-amber-100">{t('footer.companyName')}</h4>
+                        <h4 className="text-xl font-bold mb-4">{t('footer.companyName')}</h4>
                         <p className="text-gray-300 mb-4">
                             {t('footer.description')}
                         </p>
                         <div className="flex space-x-4">
-                            <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-500 transition-colors">
+                            <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
                                 <Phone className="w-5 h-5" />
                             </div>
-                            <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-500 transition-colors">
+                            <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
                                 <Mail className="w-5 h-5" />
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h4 className="text-xl font-bold mb-4 text-amber-100">{t('footer.popularDestinations')}</h4>
+                        <h4 className="text-xl font-bold mb-4">{t('footer.popularDestinations')}</h4>
                         <ul className="space-y-2 text-gray-300">
                             <li>{t('footer.vietnam')}</li>
                             <li>{t('footer.thailand')}</li>
@@ -33,12 +33,12 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h4 className="text-xl font-bold mb-4 text-amber-100">{t('footer.contact')}</h4>
+                        <h4 className="text-xl font-bold mb-4">{t('footer.contact')}</h4>
                         <div className="space-y-2 text-gray-300">
                             <p>{t('footer.email')}</p>
                             <p>{t('footer.phone')}</p>
                             <p>{t('footer.address')}</p>
-                            <p className="text-amber-400 font-semibold">{t('footer.support247')}</p>
+                            <p className="text-emerald-400 font-semibold">{t('footer.support247')}</p>
                         </div>
                     </div>
                 </div>
