@@ -7,7 +7,12 @@ export default defineConfig({
   base: '/vietnam-travel/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      }
+    }
   },
 
   // Optional: for better debugging

@@ -44,8 +44,10 @@ const Footer = () => {
                             <p>{t('footer.phone')}</p>
                             <p className="text-yellow-300 font-semibold">{t('footer.support247')}</p>
                         </div>
-                        <p className="text-gray-300 text-xs">&copy; 2025 {t('footer.companyName')}. {t('footer.allRightsReserved')}.</p>
                     </div>
+                </div>
+                <div className="text-center mt-4">
+                    <p className="text-gray-300 text-xs">&copy; 2025 {t('footer.companyName')}. {t('footer.allRightsReserved')}.</p>
                 </div>
             </div>
         </footer>
