@@ -5,6 +5,8 @@ import { useTranslation } from '../hooks/useTranslation';
 const LanguageSelector = () => {
     const { currentLanguage, changeLanguage } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
+    const buttonRef = useRef(null);
     const dropdownRef = useRef(null);
 
     const languages = [
@@ -17,7 +19,8 @@ const LanguageSelector = () => {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target) && 
+                buttonRef.current && !buttonRef.current.contains(event.target)) {
                 setIsOpen(false);
             }
         };
@@ -31,11 +34,22 @@ const LanguageSelector = () => {
         setIsOpen(false);
     };
 
+    const toggleDropdown = () => {
+        if (buttonRef.current) {
+            const rect = buttonRef.current.getBoundingClientRect();
+            setDropdownPosition({
+                top: rect.bottom + 4, // 4px gap, no scroll offset
+                left: rect.right - 160 // 160px is dropdown width
+            });
+        }
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <div className="relative" ref={dropdownRef}>
+        <div className="relative" ref={buttonRef}>
             <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white/10 transition-colors"
+                onClick={toggleDropdown}
+                className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white/20 transition-colors border border-white/20"
             >
                 <span>{currentLang?.flag}</span>
                 <span>{currentLang?.name}</span>
@@ -43,7 +57,14 @@ const LanguageSelector = () => {
             </button>
 
             {isOpen && (
-                <div className="absolute right-0 top-full mt-1 w-40 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
+                <div 
+                    ref={dropdownRef}
+                    className="fixed bg-white rounded-md shadow-lg border border-gray-200 py-1 z-[9999] w-40"
+                    style={{
+                        top: dropdownPosition.top,
+                        left: dropdownPosition.left
+                    }}
+                >
                     {languages.map((lang) => (
                         <button
                             key={lang.code}

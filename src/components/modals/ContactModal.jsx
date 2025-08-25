@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../ui/Button';
+import { submitContactForm } from '../../services/supabase';
 
 const ContactModal = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
@@ -8,14 +9,28 @@ const ContactModal = ({ isOpen, onClose }) => {
         phone: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log('Form submitted:', formData);
-        // Reset form and close modal
-        setFormData({ name: '', email: '', phone: '', message: '' });
-        onClose();
+        setIsSubmitting(true);
+        setSubmitMessage('');
+        
+        const result = await submitContactForm(formData);
+        
+        if (result.success) {
+            setSubmitMessage('Mesajul a fost trimis cu succes!');
+            setFormData({ name: '', email: '', phone: '', message: '' });
+            setTimeout(() => {
+                onClose();
+                setSubmitMessage('');
+            }, 2000);
+        } else {
+            setSubmitMessage('Eroare la trimiterea mesajului. Te rugăm să încerci din nou.');
+        }
+        
+        setIsSubmitting(false);
     };
 
     const handleChange = (e) => {
@@ -80,14 +95,25 @@ const ContactModal = ({ isOpen, onClose }) => {
                         type="submit"
                         variant="success"
                         className="w-full"
+                        disabled={isSubmitting}
                     >
-                        Trimite mesajul
+                        {isSubmitting ? 'Se trimite...' : 'Trimite mesajul'}
                     </Button>
                 </form>
 
-                <p className="text-center text-sm text-gray-500 mt-4">
-                    Te vom contacta în cel mai scurt timp!
-                </p>
+                {submitMessage && (
+                    <p className={`text-center text-sm mt-4 ${
+                        submitMessage.includes('succes') ? 'text-green-600' : 'text-red-600'
+                    }`}>
+                        {submitMessage}
+                    </p>
+                )}
+
+                {!submitMessage && (
+                    <p className="text-center text-sm text-gray-500 mt-4">
+                        Te vom contacta în cel mai scurt timp!
+                    </p>
+                )}
             </div>
         </div>
     );

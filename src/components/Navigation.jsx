@@ -12,7 +12,7 @@ const Navigation = ({ activeTab, onTabChange }) => {
     ];
     
     return (
-        <nav className="bg-white shadow-sm border-b sticky top-0 z-10">
+        <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex space-x-8">
                     {navigationTabs.map(tab => (

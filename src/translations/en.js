@@ -1,7 +1,7 @@
 export default {
     // Header
     header: {
-        companyName: 'Free Spirit Exotic Travel',
+        companyName: 'Lotus Spirit Travel',
         tagline: 'Unforgettable journeys in Vietnam',
         contactUs: 'Contact Us'
     },
@@ -95,7 +95,7 @@ export default {
 
     // Footer
     footer: {
-        companyName: 'Free Spirit Exotic Travel',
+        companyName: 'Lotus Spirit Travel',
         description: 'We transform travel dreams into reality with authentic and unforgettable experiences.',
         popularDestinations: 'Popular Destinations',
         vietnam: 'Vietnam - Complete Circuits',
