@@ -1,11 +1,10 @@
 import React from 'react';
 import { Plane } from 'lucide-react';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
-import Button from './ui/Button';
 import LanguageSelector from './LanguageSelector';
 import { useTranslation } from '../hooks/useTranslation';
 
-const Header = ({ onContactClick }) => {
+const Header = () => {
     const { t } = useTranslation();
     
     return (
