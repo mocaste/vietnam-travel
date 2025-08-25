@@ -5,19 +5,19 @@ const Overview = () => {
     const { t } = useTranslation();
     const images = [
         {
-            src: `${import.meta.env.BASE_URL}images/ho-chi-minh.jpg`,
+            src: "/vietnam-travel/images/ho-chi-minh.jpg",
             alt: "Ho Chi Minh City"
         },
         {
-            src: `${import.meta.env.BASE_URL}images/hoi-an.jpg`,
+            src: "/vietnam-travel/images/hoi-an.jpg",
             alt: "Hoi An"
         },
         {
-            src: `${import.meta.env.BASE_URL}images/hanoi.jpg`,
+            src: "/vietnam-travel/images/hanoi.jpg",
             alt: "Hanoi"
         },
         {
-            src: `${import.meta.env.BASE_URL}images/da-nang.jpg`,
+            src: "/vietnam-travel/images/da-nang.jpg",
             alt: "Vietnam landscape"
         }
     ];

@@ -9,25 +9,25 @@ const Itinerary = () => {
             dayKey: "travelData.itinerary.day1to3",
             locationKey: "travelData.itinerary.hoChiMinhCity",
             descriptionKey: "travelData.itinerary.hoChiMinhDesc",
-            image: `${import.meta.env.BASE_URL}images/ho-chi-minh.jpg`
+            image: "/vietnam-travel/images/ho-chi-minh.jpg"
         },
         {
             dayKey: "travelData.itinerary.day4to5",
             locationKey: "travelData.itinerary.daNangHoiAn",
             descriptionKey: "travelData.itinerary.daNangHoiAnDesc",
-            image: `${import.meta.env.BASE_URL}images/hoi-an.jpg`
+            image: "/vietnam-travel/images/hoi-an.jpg"
         },
         {
             dayKey: "travelData.itinerary.day5to7",
             locationKey: "travelData.itinerary.iubitica",
             descriptionKey: "travelData.itinerary.iubiticaDesc",
-            image: `${import.meta.env.BASE_URL}images/da-nang.jpg`
+            image: "/vietnam-travel/images/da-nang.jpg"
         },
         {
             dayKey: "travelData.itinerary.day7to10",
             locationKey: "travelData.itinerary.hanoi",
             descriptionKey: "travelData.itinerary.hanoiDesc",
-            image: `${import.meta.env.BASE_URL}images/hanoi.jpg`
+            image: "/vietnam-travel/images/hanoi.jpg"
         }
     ];
     
