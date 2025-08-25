@@ -1,5 +1,6 @@
 import React from 'react';
 import { Plane } from 'lucide-react';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import Button from './ui/Button';
 import LanguageSelector from './LanguageSelector';
 import { useTranslation } from '../hooks/useTranslation';
@@ -38,12 +39,30 @@ const Header = ({ onContactClick }) => {
                         </div>
                         <div className="flex items-center space-x-4">
                             <LanguageSelector />
-                            <Button
-                                variant="secondary"
-                                onClick={onContactClick}
+                            {/*<Button*/}
+                            {/*    variant="secondary"*/}
+                            {/*    onClick={onContactClick}*/}
+                            {/*>*/}
+                            {/*    {t('header.contactUs')}*/}
+                            {/*</Button>*/}
+                          <div className="flex items-center space-x-2">
+                            <a
+                                href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-white hover:text-yellow-300 transition-colors"
                             >
-                                {t('header.contactUs')}
-                            </Button>
+                              <FaFacebook className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://instagram.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-white hover:text-yellow-300 transition-colors"
+                            >
+                              <FaInstagram className="w-5 h-5" />
+                            </a>
+                          </div>
                         </div>
                     </div>
                 </div>

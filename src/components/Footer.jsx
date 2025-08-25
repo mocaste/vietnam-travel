@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Footer = () => {
@@ -36,6 +37,22 @@ const Footer = () => {
                             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center border border-white/30">
                                 <Mail className="w-4 h-4" />
                             </div>
+                            <a 
+                                href="https://facebook.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center border border-white/30 hover:bg-yellow-300/20 transition-colors"
+                            >
+                                <FaFacebook className="w-4 h-4" />
+                            </a>
+                            <a 
+                                href="https://instagram.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center border border-white/30 hover:bg-yellow-300/20 transition-colors"
+                            >
+                                <FaInstagram className="w-4 h-4" />
+                            </a>
                         </div>
                     </div>
                     <div className="text-center md:text-right">
